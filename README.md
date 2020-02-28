@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/daz-is/jmespath.js.png?branch=publish)](https://travis-ci.org/daz-is/jmespath.js)
 
+## Install
+
+    npm install --save @daz.is/jmespath.js
+
 ## FORK
 
 NB: This is a fork of the original JavaScript implementation 
