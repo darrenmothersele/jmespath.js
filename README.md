@@ -1,6 +1,6 @@
 # jmespath.js
 
-[![Build Status](https://travis-ci.org/daz.is/jmespath.js.png?branch=master)](https://travis-ci.org/daz.is/jmespath.js)
+[![Build Status](https://travis-ci.org/daz-is/jmespath.js.png?branch=publish)](https://travis-ci.org/daz-is/jmespath.js)
 
 ## FORK
 
