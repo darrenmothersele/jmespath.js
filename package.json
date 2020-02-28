@@ -1,14 +1,20 @@
 {
-  "name": "jmespath",
+  "name": "@daz.is/jmespath",
   "description": "JMESPath implementation in javascript",
-  "version": "0.15.0",
+  "version": "1.0.0",
   "author": {
     "name": "James Saryerwinnie",
     "email": "js@jamesls.com",
     "url": "http://jamesls.com/"
   },
-  "homepage": "https://github.com/jmespath/jmespath.js",
-  "contributors": [],
+  "homepage": "https://github.com/daz-is/jmespath.js",
+  "contributors": [
+    {
+      "name": "Darren Mothersele",
+      "email": "npm@daz.is",
+      "url": "https://daz.is"
+    }
+  ],
   "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-jshint": "^2.1.0",
@@ -26,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jmespath/jmespath.js"
+    "url": "git://github.com/daz-is/jmespath.js"
   },
   "bugs": {
-    "url": "http://github.com/jmespath/jmespath.js/issues",
+    "url": "http://github.com/daz-is/jmespath.js/issues",
     "mail": ""
   },
   "license": "Apache-2.0",

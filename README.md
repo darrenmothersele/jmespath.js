@@ -1,6 +1,18 @@
 # jmespath.js
 
-[![Build Status](https://travis-ci.org/jmespath/jmespath.js.png?branch=master)](https://travis-ci.org/jmespath/jmespath.js)
+[![Build Status](https://travis-ci.org/daz.is/jmespath.js.png?branch=master)](https://travis-ci.org/daz.is/jmespath.js)
+
+## FORK
+
+NB: This is a fork of the original JavaScript implementation 
+of JMES Path. The original is now believed to be unmaintained,
+so this fork adds several useful features:
+
+- define custom functions
+- cache parsed expressions 
+- access the root element using $
+
+## About
 
 jmespath.js is a javascript implementation of JMESPath,
 which is a query language for JSON.  It will take a JSON
