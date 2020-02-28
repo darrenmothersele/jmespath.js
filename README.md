@@ -4,7 +4,7 @@
 
 ## Install
 
-    npm install --save @daz.is/jmespath.js
+    npm install --save @daz.is/jmespath
 
 ## FORK
 
