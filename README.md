@@ -66,12 +66,11 @@ Custom functions can be added to the JMESPath runtime by using the
 `decorate()` function:
 
 ```js
-var TYPE_NUMBER = 0;
 function customFunc(resolvedArgs) {
   return resolvedArgs[0] + 99;
 }
 var extraFunctions = {
-  custom: {_func: customFunc, _signature: [{types: [TYPE_NUMBER]}]},
+  custom: {_func: customFunc, _signature: [{types: [jmespath.types.TYPE_NUMBER]}]},
 };
 jmespath.decorate(extraFunctions);
 ```
