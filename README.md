@@ -97,6 +97,9 @@ value = expr({ a: 2 });
 assert.strictEqual(value, 2);
 ```
 
+For more examples of custom functions, and intregrating Lodash, 
+see [JMESPath+](https://github.com/daz-is/jmespath-plus).
+
 ## More Resources
 
 The example above only show a small amount of what
