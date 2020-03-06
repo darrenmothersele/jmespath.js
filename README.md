@@ -1,6 +1,22 @@
 # jmespath.js
 
-[![Build Status](https://travis-ci.org/jmespath/jmespath.js.png?branch=master)](https://travis-ci.org/jmespath/jmespath.js)
+[![Build Status](https://travis-ci.org/daz-is/jmespath.js.png?branch=publish)](https://travis-ci.org/daz-is/jmespath.js)
+
+## Install
+
+    npm install --save @daz.is/jmespath
+
+## FORK
+
+NB: This is a fork of the original JavaScript implementation 
+of JMES Path. The original is now believed to be unmaintained,
+so this fork adds several useful features:
+
+- define custom functions
+- cache parsed expressions 
+- access the root element using $
+
+## About
 
 jmespath.js is a javascript implementation of JMESPath,
 which is a query language for JSON.  It will take a JSON
@@ -50,12 +66,11 @@ Custom functions can be added to the JMESPath runtime by using the
 `decorate()` function:
 
 ```js
-var TYPE_NUMBER = 0;
 function customFunc(resolvedArgs) {
   return resolvedArgs[0] + 99;
 }
 var extraFunctions = {
-  custom: {_func: customFunc, _signature: [{types: [TYPE_NUMBER]}]},
+  custom: {_func: customFunc, _signature: [{types: [jmespath.types.TYPE_NUMBER]}]},
 };
 jmespath.decorate(extraFunctions);
 ```
@@ -81,6 +96,9 @@ assert.strictEqual(value, 1);
 value = expr({ a: 2 });
 assert.strictEqual(value, 2);
 ```
+
+For more examples of custom functions, and intregrating Lodash, 
+see [JMESPath+](https://github.com/daz-is/jmespath-plus).
 
 ## More Resources
 
