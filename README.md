@@ -1,10 +1,8 @@
 # jmespath.js
 
-[![Build Status](https://travis-ci.org/daz-is/jmespath.js.png?branch=publish)](https://travis-ci.org/daz-is/jmespath.js)
-
 ## Install
 
-    npm install --save @daz.is/jmespath
+    npm install --save @cloud-elements/jmespath
 
 ## FORK
 
@@ -13,7 +11,7 @@ of JMES Path. The original is now believed to be unmaintained,
 so this fork adds several useful features:
 
 - define custom functions
-- cache parsed expressions 
+- cache parsed expressions
 - access the root element using $
 
 ## About
