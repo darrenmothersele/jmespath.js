@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/daz-is/jmespath.js.png?branch=publish)](https://travis-ci.org/daz-is/jmespath.js)
 
+## Install
+
+    npm install --save @daz.is/jmespath
+
 ## FORK
 
 NB: This is a fork of the original JavaScript implementation 
@@ -62,12 +66,11 @@ Custom functions can be added to the JMESPath runtime by using the
 `decorate()` function:
 
 ```js
-var TYPE_NUMBER = 0;
 function customFunc(resolvedArgs) {
   return resolvedArgs[0] + 99;
 }
 var extraFunctions = {
-  custom: {_func: customFunc, _signature: [{types: [TYPE_NUMBER]}]},
+  custom: {_func: customFunc, _signature: [{types: [jmespath.types.TYPE_NUMBER]}]},
 };
 jmespath.decorate(extraFunctions);
 ```
@@ -104,6 +107,11 @@ var data = { one: 'first',  two: 'second' };
 var result = jmespath.search(data, '{ one }');
 strictDeepEqual(result, { one: 'first' });
 ```
+
+## JMESPath+
+
+For more examples of custom functions, and intregrating Lodash, 
+see [JMESPath+](https://github.com/daz-is/jmespath-plus).
 
 ## More Resources
 
