@@ -276,3 +276,11 @@ describe('root', function() {
     }
   );
 });
+
+describe('key only projection', function () {
+  it('should be able to form multi-select hash using only the keys', function () {
+    var data = { one: 'first',  two: 'second' };
+    var result = jmespath.search(data, '{ one }');
+    strictDeepEqual(result, { one: 'first' });
+  });
+});

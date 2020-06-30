@@ -94,6 +94,17 @@ value = expr({ a: 2 });
 assert.strictEqual(value, 2);
 ```
 
+## Key-only MultiSelect Hashes
+
+I have changed the grammar slightly to allow multi-select hashes to 
+be specified using only the keys.
+
+```js
+var data = { one: 'first',  two: 'second' };
+var result = jmespath.search(data, '{ one }');
+strictDeepEqual(result, { one: 'first' });
+```
+
 ## More Resources
 
 The example above only show a small amount of what
