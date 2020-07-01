@@ -108,6 +108,13 @@ var result = jmespath.search(data, '{ one }');
 strictDeepEqual(result, { one: 'first' });
 ```
 
+## Optional arguments to functions
+
+The latest version (v1.3) adds the ability for functions 
+(including custom functions added via `decorate`) to have 
+optional arguments. To activate this, set `optional: true`
+in the function signature. 
+
 ## JMESPath+
 
 For more examples of custom functions, and intregrating Lodash, 
