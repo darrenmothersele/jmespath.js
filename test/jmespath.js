@@ -305,5 +305,29 @@ describe('optional function arg', function () {
     assert.strictEqual(wasCalled, true);
     assert.strictEqual(value, 1);
   });
+  it('should allow passing optional args', function () {
+    var TYPE_NUMBER = 0;
+    var wasCalled = false;
+    function customFunc(resolvedArgs) {
+      wasCalled = true;
+      return resolvedArgs[0] + (resolvedArgs[1] || 0) + (resolvedArgs[2] || 0);
+    }
+    var extraFunctions = {
+      custom: {
+        _func: customFunc,
+        _signature: [
+          {types: [TYPE_NUMBER]},
+          {types: [TYPE_NUMBER], optional: true},
+          {types: [TYPE_NUMBER], optional: true}
+        ]
+      },
+    };
+    var value = jmespath.decorate(extraFunctions)('custom(`1`, `2`)')({});
+    assert.strictEqual(wasCalled, true);
+    assert.strictEqual(value, 3);
+    wasCalled = false;
+    value = jmespath.decorate(extraFunctions)('custom(`1`, `2`, `3`)')({});
+    assert.strictEqual(wasCalled, true);
+    assert.strictEqual(value, 6);
+  });
 });
-
