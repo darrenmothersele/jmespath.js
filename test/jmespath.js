@@ -284,3 +284,26 @@ describe('key only projection', function () {
     strictDeepEqual(result, { one: 'first' });
   });
 });
+
+describe('optional function arg', function () {
+  it('should allow final args to be declared as optional', function () {
+    var TYPE_NUMBER = 0;
+    var wasCalled = false;
+    function customFunc(resolvedArgs) {
+      assert.strictEqual(resolvedArgs[1], undefined);
+      assert.strictEqual(resolvedArgs[2], undefined);
+      wasCalled = true;
+      return resolvedArgs[0];
+    }
+    var extraFunctions = {
+      custom: {
+        _func: customFunc,
+        _signature: [{types: [TYPE_NUMBER]},{types: [TYPE_NUMBER], optional: true},{types: [TYPE_NUMBER], optional: true}]
+      },
+    };
+    var value = jmespath.decorate(extraFunctions)('custom(`1`)')({});
+    assert.strictEqual(wasCalled, true);
+    assert.strictEqual(value, 1);
+  });
+});
+
